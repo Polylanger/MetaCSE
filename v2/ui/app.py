@@ -64,3 +64,7 @@ class MetaCSEApp(ctk.CTk):
 
         footer_text = "Version: v1.0.0 | Author: Polylanger | E-mail: qiang.zhangcs@outlook.com"
         ctk.CTkLabel(footer, text=footer_text, text_color="#666").pack(pady=3)
+
+    def get_storage_configs(self):
+        """获取存储配置"""
+        return {card.title: card.get_values() for card in self.config_view.storage_cards}
